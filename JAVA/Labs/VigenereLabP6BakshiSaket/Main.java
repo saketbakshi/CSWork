@@ -12,11 +12,12 @@ public class Main
 		
 		do //runs through the loop until all lines of code have been converted
 		{
-			String encodeOrDecode = inputScanner.next();
-			String key = inputScanner.next();
-			String message = inputScanner.nextLine();
+			String[] parts = new String[3];
+			parts[0] = inputScanner.next();
+			parts[1] = inputScanner.next();
+			parts[2] = inputScanner.nextLine();
 
-			VigenereLabP6BakshiSaket bleh = new VigenereLabP6BakshiSaket(encodeOrDecode, key, message);
+			VigenereLabP6BakshiSaket bleh = new VigenereLabP6BakshiSaket(parts[0], parts[1], parts[2]);
 			bleh.runThroughInput();
 			System.out.println(bleh.getOutput());			
 		} while(inputScanner.hasNext()); 
