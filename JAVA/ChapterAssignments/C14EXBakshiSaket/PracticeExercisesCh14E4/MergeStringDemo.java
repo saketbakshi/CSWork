@@ -1,3 +1,7 @@
+/**
+	Saket Bakshi. 4/23/19. Period 6. This is used for problem 4 of Chapter 14.
+	Tests String Merge sort.
+*/
 import java.util.Scanner;
 
 public class MergeStringDemo

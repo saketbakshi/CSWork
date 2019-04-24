@@ -1,3 +1,7 @@
+/**
+	Saket Bakshi. 4/23/19. Period 6. This is used for problem 1 of Chapter 14.
+	Modifies merge sort to sort Strings.
+*/
 public class MergeSorterString
 {
 	/**
