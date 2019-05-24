@@ -9,10 +9,19 @@ import java.awt.event.ActionEvent;
 import java.awt.Image;
 import java.io.*;
 
-public class JukeboxWindow extends JFrame
+public class JukeboxWindowV2 extends JFrame
 {
 	private static final int FRAME_WID = 900;
 	private static final int FRAME_HEI = 950;
+
+	public JButton makeButton(String name, File input, int xPos, int yPos, int wid, int hei) {
+		JButton result = new JButton(name);
+		result.setBounds(xPos, yPos, wid, hei);
+		AudioInputStream audioInput = AudioSystem.getAudioInputStream(input);
+		DataLine.Info info = new DataLine.Info(Clip,class, audioInput.getFormat());
+		Clip clip = (Clip) AudioSystem.getLine(info);
+		clip.open(audioInput);
+	}
 
 
 	
